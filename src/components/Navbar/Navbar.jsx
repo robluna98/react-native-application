@@ -15,7 +15,11 @@ const Navbar = () => {
 
       <nav className="nav-wrapper">
         <div className="nav-content">
-          <img className="logo" src="./assets/images/logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src="./assets/images/logo_placeholder_image.png"
+            alt="Logo Placeholder"
+          />
 
           <ul>
             <li>
