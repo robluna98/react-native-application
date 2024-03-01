@@ -10,16 +10,20 @@ const Navbar = () => {
 
           <ul>
             <li>
-              <a className="menu-item">Home</a>
+              {/* <a className="menu-item">Home</a> */}
+              <button className="menu-item">Home</button>
             </li>
             <li>
-              <a className="menu-item">Skills</a>
+              {/* <a className="menu-item">Skills</a> */}
+              <button className="menu-item">Skills</button>
             </li>
             <li>
-              <a className="menu-item">Work Experience</a>
+              {/* <a className="menu-item">Work Experience</a> */}
+              <button className="menu-item">Work Experience</button>
             </li>
             <li>
-              <a className="menu-item">Contact</a>
+              {/* <a className="menu-item">Contact</a> */}
+              <button className="menu-item">Contact</button>
             </li>
 
             <button className="resume-btn" onClick={() => {}}>
