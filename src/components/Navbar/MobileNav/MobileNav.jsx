@@ -1,20 +1,14 @@
 import React from 'react';
-import './Navbar.css';
-import MobileNav from './MobileNav/MobileNav';
+import './MobileNav.css';
 
-const Navbar = () => {
-  const [openMenu, setOpenMenu] = React.useState(false);
-
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
-
+const MobileNav = ({ isOpen, toggleMenu }) => {
   return (
     <>
-      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
-
-      <nav className="nav-wrapper">
-        <div className="nav-content">
+      <div
+        className={`mobile-menu ${isOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+      >
+        <div className="mobile-menu-container">
           <img className="logo" src="./assets/images/logo.svg" alt="logo" />
 
           <ul>
@@ -39,23 +33,10 @@ const Navbar = () => {
               Resume
             </button>
           </ul>
-
-          <button class="menu-btn" onClick={toggleMenu}>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-            />
-            <span
-              class={'material-symbols-outlined'}
-              style={{ fontSize: '1.8rem' }}
-            >
-              {openMenu ? 'close' : 'menu'}
-            </span>
-          </button>
         </div>
-      </nav>
+      </div>
     </>
   );
 };
 
-export default Navbar;
+export default MobileNav;
