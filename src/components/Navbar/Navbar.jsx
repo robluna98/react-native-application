@@ -1,9 +1,10 @@
 import React from 'react';
 import './Navbar.css';
 import MobileNav from './MobileNav/MobileNav';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = React.useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
