@@ -10,6 +10,12 @@ const Navbar = () => {
     setOpenMenu(!openMenu);
   };
 
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
@@ -24,20 +30,40 @@ const Navbar = () => {
 
           <ul>
             <li>
-              {/* <a className="menu-item">Home</a> */}
-              <button className="menu-item">Home</button>
+              <a
+                href="#skills"
+                onClick={(event) => scrollToSection(event, 'skills')}
+                className="menu-item"
+              >
+                Skills
+              </a>
             </li>
             <li>
-              {/* <a className="menu-item">Skills</a> */}
-              <button className="menu-item">Skills</button>
+              <a
+                href="#skils"
+                onClick={(event) => scrollToSection(event, 'skills')}
+                className="menu-item"
+              >
+                Projects
+              </a>
             </li>
             <li>
-              {/* <a className="menu-item">Work Experience</a> */}
-              <button className="menu-item">Work Experience</button>
+              <a
+                href="#experience"
+                onClick={(event) => scrollToSection(event, 'experience')}
+                className="menu-item"
+              >
+                Work Experience
+              </a>
             </li>
             <li>
-              {/* <a className="menu-item">Contact</a> */}
-              <button className="menu-item">Contact</button>
+              <a
+                href="#contact"
+                onClick={(event) => scrollToSection(event, 'contact')}
+                className="menu-item"
+              >
+                Contact
+              </a>
             </li>
 
             <button className="resume-btn" onClick={() => {}}>
