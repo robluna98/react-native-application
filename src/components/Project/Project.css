@@ -1,16 +1,16 @@
-.experience-container {
+.project-container {
   margin: 4rem 0;
   position: relative;
 }
 
-.experience-container h5 {
+.project-container h5 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 3rem;
 }
 
-.experience-arrow-left,
-.experience-arrow-right {
+.project-arrow-left,
+.project-arrow-right {
   width: 2.2rem;
   height: 2.2rem;
   display: flex;
@@ -26,41 +26,41 @@
   cursor: pointer;
 }
 
-.experience-arrow-left span,
-.experience-arrow-right span {
+.project-arrow-left span,
+.project-arrow-right span {
   font-size: 2rem;
   font-weight: 500;
 }
 
-.experience-arrow-left {
+.project-arrow-left {
   left: -2rem;
 }
 
-.experience-arrow-right {
+.project-arrow-right {
   right: -2rem;
 }
 
 @media (max-width: 1025px) {
-  .experience-arrow-left {
-    left: 0rem;
+  .project-arrow-left {
+    left: -1rem;
   }
 
-  .experience-arrow-right {
-    right: 0rem;
+  .project-arrow-right {
+    right: -1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .experience-container h5 {
+  .project-container h5 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
   }
 
-  .experience-arrow-left {
+  .project-arrow-left {
     left: -1rem;
   }
 
-  .experience-arrow-right {
+  .project-arrow-right {
     right: -1rem;
   }
 }

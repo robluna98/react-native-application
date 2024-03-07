@@ -78,3 +78,48 @@ export const WORK_EXPERIENCE = [
     ],
   },
 ];
+
+export const PROJECT_EXPERIENCE = [
+  {
+    title: 'PROJECT PLACEHOLDER',
+    github_link: 'https://github.com',
+    live_link: 'https://example.com/',
+    image: './assets/images/project_placeholder.png',
+    tech_stack: ['React', 'Node.js', 'MongoDB'],
+    information: [
+      'Placeholder Information. Project information is not available at this time.' +
+        'Placeholder Information. Project information is not available at this time.' +
+        'Placeholder Information. Project information is not available at this time.',
+    ],
+  },
+  {
+    title: 'PROJECT PLACEHOLDER',
+    github_link: 'https://github.com',
+    live_link: 'https://example.com/',
+    image: './assets/images/project_placeholder.png',
+    tech_stack: ['MongoDB'],
+    information: [
+      'Placeholder Information. Project information is not available at this time.',
+    ],
+  },
+  {
+    title: 'PROJECT PLACEHOLDER',
+    github_link: 'https://github.com',
+    live_link: 'https://example.com/',
+    image: './assets/images/project_placeholder.png',
+    tech_stack: ['React', 'Node.js'],
+    information: [
+      'Placeholder Information. Project information is not available at this time.',
+    ],
+  },
+  {
+    title: 'PROJECT PLACEHOLDER',
+    github_link: 'https://github.com',
+    live_link: 'https://example.com/',
+    image: './assets/images/project_placeholder.png',
+    tech_stack: ['React'],
+    information: [
+      'Placeholder Information. Project information is not available at this time.',
+    ],
+  },
+];

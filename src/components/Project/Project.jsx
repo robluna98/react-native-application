@@ -1,16 +1,16 @@
 import React, { useRef } from 'react';
-import './WorkExperience.css';
-import ExperienceCard from './ExperienceCard/ExperienceCard';
-import { WORK_EXPERIENCE } from '../../utils/data';
+import './Project.css';
+import ProjectCard from './ProjectCard/ProjectCard';
+import { PROJECT_EXPERIENCE } from '../../utils/data';
 import Slider from 'react-slick';
 
-const WorkExperience = () => {
+const ProjectExperience = () => {
   const sliderRef = useRef();
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
@@ -33,21 +33,23 @@ const WorkExperience = () => {
   };
 
   return (
-    <section id="experience" className="experience-container">
-      <h5>Work Experience</h5>
+    <section id="projects" className="project-container">
+      <h5>Projects</h5>
 
-      <div className="experience-content">
-        <div className="experience-arrow-right" onClick={slideRight}>
+      <div className="project-content">
+        <div className="project-arrow-right" onClick={slideRight}>
           <span class="material-symbols-outlined">chevron_right</span>
         </div>
 
-        <div className="experience-arrow-left" onClick={slideLeft}>
+        <div className="project-arrow-left" onClick={slideLeft}>
           <span class="material-symbols-outlined">chevron_left</span>
         </div>
 
         <Slider ref={sliderRef} {...settings}>
-          {WORK_EXPERIENCE.map((item) => (
-            <ExperienceCard key={item.title} details={item} />
+          {PROJECT_EXPERIENCE.map((item) => (
+            <div>
+              <ProjectCard key={item.title} details={item} />
+            </div>
           ))}
         </Slider>
       </div>
@@ -55,4 +57,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default ProjectExperience;

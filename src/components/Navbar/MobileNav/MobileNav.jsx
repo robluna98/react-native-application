@@ -33,8 +33,8 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             </li>
             <li>
               <a
-                href="#skils"
-                onClick={(event) => scrollToSection(event, 'skills')}
+                href="#projects"
+                onClick={(event) => scrollToSection(event, 'projects')}
                 className="menu-item"
               >
                 Projects
