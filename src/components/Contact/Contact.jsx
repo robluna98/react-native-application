@@ -2,6 +2,8 @@ import React from 'react';
 import './Contact.css';
 import ContactInfoCard from './ContactInfoCard/ContactInfoCard';
 import ContactForm from './ContactForm/ContactForm';
+// import { CiLinkedin } from 'react-icons/ci';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -11,12 +13,14 @@ const Contact = () => {
       <div className="contact-content">
         <div style={{ flex: 1 }}>
           <ContactInfoCard
-            iconUrl="./assets/images/react_logo.png"
-            text="placeholder@example.com"
+            link="https://www.linkedin.com/in/robert-luna-279982151/"
+            icon={<FaLinkedin />}
+            text="LinkedIn: Robert Luna"
           />
           <ContactInfoCard
-            iconUrl="./assets/images/react_logo.png"
-            text="placeholder@example.com"
+            link="https://github.com/robluna98"
+            icon={<FaGithub />}
+            text="GitHub: Robert.Dev"
           />
         </div>
 

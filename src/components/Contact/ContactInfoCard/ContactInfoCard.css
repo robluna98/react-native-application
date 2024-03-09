@@ -10,7 +10,18 @@
   margin-bottom: 2rem;
 }
 
+.contact-details-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits text color from parent */
+}
+
+.contact-details-card:hover {
+  color: #fff;
+  background: #000;
+}
+
 .contact-details-card .icon {
+  font-size: 3rem;
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -21,13 +32,13 @@
   margin-bottom: 0.8rem;
 }
 
-.icon img {
-  width: 1.8rem;
-  height: auto;
-  object-fit: contain;
-}
-
 .contact-details-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
