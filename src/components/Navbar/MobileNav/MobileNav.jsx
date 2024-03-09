@@ -15,11 +15,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
         onClick={toggleMenu}
       >
         <div className="mobile-menu-container">
-          <img
-            className="logo"
-            src="./assets/images/logo_placeholder_image.png"
-            alt="Logo Placeholder"
-          />
+          <h2>Robert.dev</h2>
 
           <ul>
             <li>

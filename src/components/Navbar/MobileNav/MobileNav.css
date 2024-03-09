@@ -8,7 +8,6 @@
   top: 0;
   z-index: 999 !important;
   opacity: 0;
-  box-shadow: 0px 29px 80px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   transform: translateX(-100vw);
 }
@@ -25,7 +24,7 @@
   transform: translateX(0);
 }
 
-.mobile-menu img {
+.mobile-menu h2 {
   margin-bottom: 3rem;
 }
 

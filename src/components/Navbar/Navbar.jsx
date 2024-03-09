@@ -22,11 +22,7 @@ const Navbar = () => {
 
       <nav className="nav-wrapper">
         <div className="nav-content">
-          <img
-            className="logo"
-            src="./assets/images/logo_placeholder_image.png"
-            alt="Logo Placeholder"
-          />
+          <h2>Robert.dev</h2>
 
           <ul>
             <li>
