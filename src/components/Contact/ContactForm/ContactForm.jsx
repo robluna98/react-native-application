@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
@@ -10,11 +10,11 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_MAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         {
-          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         },
       )
       .then(
