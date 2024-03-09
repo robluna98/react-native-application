@@ -1,5 +1,4 @@
 .skills-info-card {
-  /* min-height: 0rem; */
   border-radius: 0.65rem;
   border: 1.5px solid #6751b9;
   background: rgba(22, 17, 47, 0.398);
@@ -18,7 +17,7 @@
 }
 
 .skills-info-content {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -36,6 +35,7 @@
 
 .skill-info:last-child {
   border-bottom: none;
+  margin-bottom: -1.5rem;
 }
 
 .skill-info p {
