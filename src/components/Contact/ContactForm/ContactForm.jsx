@@ -1,20 +1,22 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import getEnvVars from '../../../../functions/_middleware';
 import './ContactForm.css';
 
 const ContactForm = () => {
-  const env = getEnvVars();
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(env.emailjsServiceId, env.emailjsTemplateId, form.current, {
-        publicKey: env.emailjsPublicKey,
-      })
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_MAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        },
+      )
       .then(
         () => {
           console.log('SUCCESS!');
