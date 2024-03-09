@@ -10,17 +10,16 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_MAILJS_TEMPLATE_ID,
         form.current,
         {
-          publicKey: process.env.EMAILJS_PUBLIC_KEY,
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
         },
       )
       .then(
         () => {
           console.log('SUCCESS!');
-          e.target.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
