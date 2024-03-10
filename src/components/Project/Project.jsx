@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import './Project.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 import { PROJECT_EXPERIENCE } from '../../utils/data';
@@ -38,17 +38,17 @@ const ProjectExperience = () => {
 
       <div className="project-content">
         <div className="project-arrow-right" onClick={slideRight}>
-          <span class="material-symbols-outlined">chevron_right</span>
+          <span className="material-symbols-outlined">chevron_right</span>
         </div>
 
         <div className="project-arrow-left" onClick={slideLeft}>
-          <span class="material-symbols-outlined">chevron_left</span>
+          <span className="material-symbols-outlined">chevron_left</span>
         </div>
 
         <Slider ref={sliderRef} {...settings}>
           {PROJECT_EXPERIENCE.map((item) => (
-            <div>
-              <ProjectCard key={item.title} details={item} />
+            <div key={item.title}>
+              <ProjectCard details={item} />
             </div>
           ))}
         </Slider>

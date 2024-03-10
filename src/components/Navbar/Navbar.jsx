@@ -1,6 +1,7 @@
 import './Navbar.css';
 import MobileNav from './MobileNav/MobileNav';
 import { useState } from 'react';
+import { IoMenu, IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -18,7 +19,6 @@ const Navbar = () => {
   return (
     <>
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
-
       <nav className="nav-wrapper">
         <div className="nav-content">
           <h2>Robert.dev</h2>
@@ -67,16 +67,7 @@ const Navbar = () => {
           </ul>
 
           <button className="menu-btn" onClick={toggleMenu}>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-            />
-            <span
-              className={'material-symbols-outlined'}
-              style={{ fontSize: '1.8rem' }}
-            >
-              {openMenu ? 'close' : 'menu'}
-            </span>
+            {openMenu ? <IoClose /> : <IoMenu />}
           </button>
         </div>
       </nav>
