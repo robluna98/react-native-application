@@ -66,13 +66,13 @@ const Navbar = () => {
             </button>
           </ul>
 
-          <button class="menu-btn" onClick={toggleMenu}>
+          <button className="menu-btn" onClick={toggleMenu}>
             <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
             />
             <span
-              class={'material-symbols-outlined'}
+              className={'material-symbols-outlined'}
               style={{ fontSize: '1.8rem' }}
             >
               {openMenu ? 'close' : 'menu'}
