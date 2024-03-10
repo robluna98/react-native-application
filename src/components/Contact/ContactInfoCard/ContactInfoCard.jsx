@@ -1,4 +1,3 @@
-import React from 'react';
 import './ContactInfoCard.css';
 
 const ContactInfoCard = ({ link, icon, text }) => {

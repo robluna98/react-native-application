@@ -1,4 +1,3 @@
-import React from 'react';
 import './ProjectCard.css';
 import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 
