@@ -109,7 +109,11 @@
 @media (max-width: 769px) {
   .menu-btn {
     display: block;
-    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
   }
 
   .nav-content ul {
