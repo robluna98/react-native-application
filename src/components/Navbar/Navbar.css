@@ -118,6 +118,10 @@
     -webkit-justify-content: center;
   }
 
+  .menu-btn svg {
+    align-items: center;
+  }
+
   /* .hamburger-icon {
     align-items: center;
   } */
