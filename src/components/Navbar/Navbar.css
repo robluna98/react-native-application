@@ -87,7 +87,7 @@
   width: 2.5rem;
   height: 2.5rem;
   font-size: 1.5rem;
-  display: inline-block;
+  display: flex;
   align-items: center;
   justify-content: center;
   border: none;
@@ -114,6 +114,10 @@
     margin-left: auto;
     -webkit-align-items: center;
     -webkit-justify-content: center;
+  }
+
+  .hamburger-icon {
+    align-items: center;
   }
 
   .nav-content ul {

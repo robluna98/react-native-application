@@ -67,7 +67,9 @@ const Navbar = () => {
           </ul>
 
           <button className="menu-btn" onClick={toggleMenu}>
-            {openMenu ? <IoClose /> : <IoMenu />}
+            <div className="hamburger-icon">
+              {openMenu ? <IoClose /> : <IoMenu />}
+            </div>
           </button>
         </div>
       </nav>
