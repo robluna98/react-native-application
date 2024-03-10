@@ -116,10 +116,11 @@
 @media (max-width: 769px) {
   .menu-btn {
     display: block;
+    visibility: hidden;
   }
 
   .nav-content ul {
-    display: none;
+    display: none !important;
   }
 }
 
