@@ -124,3 +124,9 @@
     padding: 0 2rem;
   }
 }
+
+@media (max-width: 769px) {
+  .nav-wrapper {
+    background: linear-gradient(90deg, #383057 0%, #1f173d 100%);
+  }
+}

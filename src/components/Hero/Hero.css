@@ -60,7 +60,8 @@
 }
 
 .hero-image > div > img {
-  width: 25rem;
+  height: 23rem;
+  width: 23rem;
   transition: all 0.3s ease;
 }
 
@@ -99,6 +100,7 @@
 
   .hero-image > div > img {
     width: 20rem;
+    height: 20rem;
   }
 
   .tech-icon {
@@ -169,6 +171,7 @@
 
   .hero-image > div > img {
     width: 16rem;
+    height: 16rem;
   }
 
   .tech-icon {

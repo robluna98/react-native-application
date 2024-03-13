@@ -14,6 +14,9 @@ const Hero = () => {
 
       <div className="hero-image">
         <div>
+          <img src="./assets/images/profile.png" alt="hero" />
+        </div>
+        <div>
           <div className="tech-icon">
             <a href="https://www.ansible.com/" target="_blank" rel="noreferrer">
               <img
@@ -22,10 +25,6 @@ const Hero = () => {
               />
             </a>
           </div>
-          <img src="./assets/images/profile.png" alt="hero" />
-        </div>
-
-        <div>
           <div className="tech-icon">
             <a href="https://react.dev/" target="_blank" rel="noreferrer">
               <img src="./assets/images/react_logo.png" alt="React Logo" />
