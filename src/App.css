@@ -4,6 +4,10 @@
   position: relative;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .container {
     padding: 0 1.5rem;
