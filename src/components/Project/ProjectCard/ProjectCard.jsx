@@ -10,9 +10,6 @@ const techIcons = {
 const ProjectCard = ({ details }) => {
   return (
     <div className="project-card">
-      <div className="project-image">
-        <img src={details.image} alt={details.title} />
-      </div>
       <div className="project-info">
         <h6>{details.title}</h6>
         <p>{details.information}</p>

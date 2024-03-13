@@ -42,11 +42,11 @@
 
 @media (max-width: 1025px) {
   .project-arrow-left {
-    left: -1rem;
+    left: 0rem;
   }
 
   .project-arrow-right {
-    right: -1rem;
+    right: 0rem;
   }
 }
 
