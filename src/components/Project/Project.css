@@ -9,6 +9,29 @@
   margin-bottom: 3rem;
 }
 
+.project-container::after,
+.project-container::before {
+  content: ' ';
+  width: 28rem;
+  height: 28rem;
+  border-radius: 28.125rem;
+  background: #9e51b9;
+  position: absolute;
+  z-index: -1;
+  filter: blur(200px);
+}
+
+.project-container::after {
+  top: -3rem;
+  left: -8rem;
+}
+
+.project-container::before {
+  background: #7c66e3;
+  bottom: 0rem;
+  right: 0rem;
+}
+
 .project-arrow-left,
 .project-arrow-right {
   width: 2.2rem;

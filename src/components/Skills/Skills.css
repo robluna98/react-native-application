@@ -9,7 +9,7 @@
   width: 28rem;
   height: 28rem;
   border-radius: 28.125rem;
-  background: #7c66e3;
+  background: #341c9b;
   position: absolute;
   z-index: -1;
   filter: blur(200px);
@@ -21,7 +21,7 @@
 }
 
 .skills-container::before {
-  background: #9e51b9;
+  background: #7c66e3;
   bottom: 0rem;
   right: 0rem;
 }
