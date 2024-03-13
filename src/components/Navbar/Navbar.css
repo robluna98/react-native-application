@@ -59,6 +59,13 @@
   opacity: 1;
 }
 
+#skills,
+#projects,
+#experience,
+#contact {
+  scroll-margin-top: 15px;
+}
+
 /* Resume Button WIP - Most likely will be updated later */
 .resume-btn {
   font-size: 0.9rem;

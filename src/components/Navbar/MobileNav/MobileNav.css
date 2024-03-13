@@ -12,6 +12,13 @@
   transform: translateX(-100vw);
 }
 
+#skills,
+#projects,
+#experience,
+#contact {
+  scroll-margin-top: 20px;
+}
+
 .mobile-menu-container {
   width: 60vw;
   height: 100vh;

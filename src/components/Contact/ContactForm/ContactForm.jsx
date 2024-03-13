@@ -50,10 +50,7 @@ const ContactForm = () => {
     <div className="contact-form-content">
       <ToastContainer position="top-right" autoClose={5000} />
       <form ref={form}>
-        <div className="name-container">
-          <input type="text" name="user_name" placeholder="Name" />
-        </div>
-
+        <input type="text" name="user_name" placeholder="Name" />
         <input type="text" name="user_email" placeholder="Email" />
         <textarea type="text" name="message" placeholder="Message" rows={3} />
 
