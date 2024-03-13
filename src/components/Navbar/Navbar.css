@@ -1,5 +1,5 @@
 .nav-wrapper {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   padding: 0.5rem 0;
   top: 0;
   z-index: 30;
@@ -86,31 +86,23 @@
 .menu-btn {
   width: 2.5rem;
   height: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: relative;
   right: 1vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  border-radius: 0.4rem;
   color: #fff;
-  background: linear-gradient(90deg, #a993fe -0.13%, #7e61e7 99.87%);
+  background: rgba(0, 0, 0, 0.3);
   line-height: 0;
   cursor: pointer;
   transition: all 0.4s ease;
   display: none;
 }
 
-.menu-btn:hover {
-  color: #a993fe;
-  background: #000;
-  border: 1px solid #a993fe;
-}
-
 @media (max-width: 769px) {
   .menu-btn {
-    display: block;
+    display: contents;
     align-items: center;
     justify-content: center;
     margin-left: auto;
@@ -121,10 +113,6 @@
   .menu-btn svg {
     align-items: center;
   }
-
-  /* .hamburger-icon {
-    align-items: center;
-  } */
 
   .nav-content ul {
     display: none !important;
