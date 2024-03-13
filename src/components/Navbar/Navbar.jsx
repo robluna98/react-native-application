@@ -61,15 +61,17 @@ const Navbar = () => {
               </a>
             </li>
 
-            <button className="resume-btn" onClick={() => {}}>
-              Resume
-            </button>
+            <a
+              href="https://docs.google.com/document/d/1d65U6SAihLcH5hOH9ucrjU8FyVF-ozXI/edit?usp=sharing&ouid=115219327091758170934&rtpof=true&sd=true"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="resume-btn">Resume</button>
+            </a>
           </ul>
 
           <button className="menu-btn" onClick={toggleMenu}>
-            {/* <div className="hamburger-icon"> */}
             {openMenu ? <IoClose /> : <IoMenu />}
-            {/* </div> */}
           </button>
         </div>
       </nav>
