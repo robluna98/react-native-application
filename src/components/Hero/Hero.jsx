@@ -1,10 +1,22 @@
 import './Hero.css';
+import TypeWriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
     <section className="hero-container">
       <div className="hero-content">
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h2>Robert Luna</h2>
+        <TypeWriter
+          className="text"
+          options={{
+            autoStart: true,
+            loop: true,
+            strings: ['Site Reliability Engineer', 'Full Stack Developer'],
+          }}
+          onInit={(typewriter) => {
+            typewriter.pauseFor(2500).deleteAll().start();
+          }}
+        />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida
           tellus at risus hendrerit mollis. Morbi ac mollis nibh, facilisis
