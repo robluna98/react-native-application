@@ -12,19 +12,21 @@ const ContactForm = () => {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const [isCooldown, setIsCooldown] = useState(false);
-  const [cooldownMessage, setCooldownMessage] = useState('');
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [timer, setTimer] = useState(30);
 
   useEffect(() => {
-    if (isCooldown) {
-      const timer = setTimeout(() => {
-        setIsCooldown(false);
-        setCooldownMessage('');
-      }, 30000); // 30 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [isCooldown]);
+    const interval = setInterval(() => {
+      if (timer > 0 && buttonDisabled) {
+        setTimer((prevTimer) => prevTimer - 1);
+      } else {
+        setButtonDisabled(false);
+        setTimer(30);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timer, buttonDisabled]);
 
   const notify = (message, isError = false) => {
     if (isError) {
@@ -37,39 +39,6 @@ const ContactForm = () => {
         draggable: true,
         theme: 'colored',
       });
-    }
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    if (validateInputs() && !isCooldown) {
-      setIsCooldown(true);
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current,
-          {
-            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-          },
-        )
-        .then(
-          () => {
-            notify('Email sent successfully.');
-            form.current.reset();
-            setIsEmailSent(true);
-          },
-          (error) => {
-            console.log(error);
-            notify(`Failed to send email: ' ${error}`, true);
-            form.current.reset();
-          },
-        );
-    } else if (isCooldown) {
-      setCooldownMessage(
-        'Please wait 30 seconds before sending another email.',
-      );
-      notify(cooldownMessage, true);
     }
   };
 
@@ -87,7 +56,7 @@ const ContactForm = () => {
       setEmailError('Email is required');
       isValid = false;
     } else if (!isValidEmail(email)) {
-      setEmailError('Invalid Email Address');
+      setEmailError('Provide a valid email address');
       isValid = false;
     } else {
       setEmailError('');
@@ -107,6 +76,33 @@ const ContactForm = () => {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (validateInputs()) {
+      setButtonDisabled(true);
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+          },
+        )
+        .then(
+          () => {
+            notify('Email sent successfully.');
+            form.current.reset();
+          },
+          (error) => {
+            console.log(error);
+            notify(`Failed to send email: ' ${error}`, true);
+            form.current.reset();
+          },
+        );
+    }
   };
 
   return (
@@ -145,8 +141,8 @@ const ContactForm = () => {
           />
           <div className="error">{messageError}</div>
         </div>
-        <button type="submit" onClick={sendEmail} disabled={isEmailSent}>
-          Send
+        <button type="submit" onClick={sendEmail} disabled={buttonDisabled}>
+          {buttonDisabled ? `Please wait ${timer} seconds` : 'Send'}
         </button>
       </form>
     </div>
