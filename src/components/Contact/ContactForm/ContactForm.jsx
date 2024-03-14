@@ -12,6 +12,9 @@ const ContactForm = () => {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isCooldown, setIsCooldown] = useState(false);
+  const [cooldownMessage, setCooldownMessage] = useState('');
 
   const notify = (message, isError = false) => {
     if (isError) {
@@ -29,7 +32,8 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (validateInputs()) {
+    if (validateInputs() && !isCooldown) {
+      setIsCooldown(true);
       emailjs
         .sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -43,13 +47,23 @@ const ContactForm = () => {
           () => {
             notify('Email sent successfully.');
             form.current.reset();
+            setIsEmailSent(true);
+            setTimeout(() => {
+              setIsCooldown(false);
+            }, 3000);
           },
           (error) => {
             console.log(error);
             notify(`Failed to send email: ' ${error}`, true);
             form.current.reset();
+            setIsCooldown(false);
           },
         );
+    } else if (isCooldown) {
+      setCooldownMessage(
+        'Please wait 30 seconds before sending another email.',
+      );
+      notify(cooldownMessage, true);
     }
   };
 
@@ -67,7 +81,7 @@ const ContactForm = () => {
       setEmailError('Email is required');
       isValid = false;
     } else if (!isValidEmail(email)) {
-      setEmailError('Provide a valid email address');
+      setEmailError('Invalid Email Address');
       isValid = false;
     } else {
       setEmailError('');
@@ -125,7 +139,7 @@ const ContactForm = () => {
           />
           <div className="error">{messageError}</div>
         </div>
-        <button type="submit" onClick={sendEmail}>
+        <button type="submit" onClick={sendEmail} disabled={isEmailSent}>
           Send
         </button>
       </form>
