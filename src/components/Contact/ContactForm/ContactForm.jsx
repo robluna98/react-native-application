@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,16 @@ const ContactForm = () => {
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isCooldown, setIsCooldown] = useState(false);
   const [cooldownMessage, setCooldownMessage] = useState('');
+
+  useEffect(() => {
+    if (isCooldown) {
+      const timer = setTimeout(() => {
+        setIsCooldown(false);
+        setCooldownMessage('');
+      }, 30000); // 30 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [isCooldown]);
 
   const notify = (message, isError = false) => {
     if (isError) {
@@ -48,15 +58,11 @@ const ContactForm = () => {
             notify('Email sent successfully.');
             form.current.reset();
             setIsEmailSent(true);
-            setTimeout(() => {
-              setIsCooldown(false);
-            }, 3000);
           },
           (error) => {
             console.log(error);
             notify(`Failed to send email: ' ${error}`, true);
             form.current.reset();
-            setIsCooldown(false);
           },
         );
     } else if (isCooldown) {
