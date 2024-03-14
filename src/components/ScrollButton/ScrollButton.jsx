@@ -37,12 +37,11 @@ const ScrollButton = () => {
   };
 
   return (
-    <button className="scroll-button">
+    <div className="scroll-button" onClick={scrollToTop}>
       <FaArrowCircleUp
-        onClick={scrollToTop}
         className={`arrow-up-icon ${visible ? 'visible' : ''}`}
       />
-    </button>
+    </div>
   );
 };
 
