@@ -20,6 +20,10 @@ form textarea {
   padding: 1rem;
 }
 
+form input:focus {
+  outline: none;
+}
+
 form button {
   font-size: 1rem;
   font-weight: 500;
@@ -36,6 +40,22 @@ form button:hover {
   color: #a993fe;
   background: #000;
   outline: 1.5px solid #a993fe;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.input-control.error {
+  color: #ff3860;
+}
+
+.input-control.error input,
+.input-control.error textarea {
+  border-color: #ff3860;
 }
 
 @media (max-width: 450px) {
