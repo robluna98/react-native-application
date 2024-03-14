@@ -1,7 +1,7 @@
 export const SKILLS = [
   {
     title: 'Frontend',
-    icon: './assets/images/react_logo.png',
+    icon: './assets/images/frontend.svg',
     skills: [
       { skill: 'PLACEHOLDER' },
       { skill: 'PLACEHOLDER' },
@@ -11,7 +11,7 @@ export const SKILLS = [
   },
   {
     title: 'Backend',
-    icon: './assets/images/react_logo.png',
+    icon: './assets/images/backend.svg',
     skills: [
       { skill: 'PLACEHOLDER' },
       { skill: 'PLACEHOLDER' },
@@ -21,7 +21,7 @@ export const SKILLS = [
   },
   {
     title: 'Tools',
-    icon: './assets/images/react_logo.png',
+    icon: './assets/images/tools.svg',
     skills: [
       { skill: 'PLACEHOLDER' },
       { skill: 'PLACEHOLDER' },
@@ -31,7 +31,7 @@ export const SKILLS = [
   },
   {
     title: 'Soft Skills',
-    icon: './assets/images/react_logo.png',
+    icon: './assets/images/soft_skills.svg',
     skills: [
       { skill: 'PLACEHOLDER' },
       { skill: 'PLACEHOLDER' },
