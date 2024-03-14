@@ -22,17 +22,17 @@
   background: none;
   padding: 0;
   bottom: calc(40px + 5vh);
-  /* animation: bounce 0.5s infinite alternate; */
+  animation: bounce 0.5s infinite alternate;
 }
 
-/* @keyframes bounce {
+@keyframes bounce {
   0% {
     transform: translateX(-50%) translateY(0);
   }
   100% {
     transform: translateX(-50%) translateY(-10px);
   }
-} */
+}
 
 .arrow-up-icon {
   opacity: 0;
