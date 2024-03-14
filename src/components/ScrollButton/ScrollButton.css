@@ -42,3 +42,9 @@
 .arrow-up-icon.visible {
   opacity: 1;
 }
+
+@media (prefers-reduced-motion) {
+  .scroll-button {
+    animation: none;
+  }
+}
