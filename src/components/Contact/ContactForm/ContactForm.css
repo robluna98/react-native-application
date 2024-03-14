@@ -12,7 +12,7 @@ form input,
 form textarea {
   flex: 1;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 16px !important;
   color: #fff;
   background: #130f2a;
   border-radius: 0.6rem;
