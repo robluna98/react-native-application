@@ -61,12 +61,4 @@
     font-size: 1.3rem;
     margin-bottom: 2rem;
   }
-
-  .experience-arrow-left {
-    left: -1rem;
-  }
-
-  .experience-arrow-right {
-    right: -1rem;
-  }
 }

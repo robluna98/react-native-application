@@ -84,12 +84,4 @@
     font-size: 1.3rem;
     margin-bottom: 2rem;
   }
-
-  .project-arrow-left {
-    left: -1rem;
-  }
-
-  .project-arrow-right {
-    right: -1rem;
-  }
 }

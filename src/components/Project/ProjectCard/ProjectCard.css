@@ -68,3 +68,9 @@
 .project-info::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 321px) {
+  .project-btn {
+    margin: 0.5rem;
+  }
+}
